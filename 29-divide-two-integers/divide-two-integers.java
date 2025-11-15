@@ -20,7 +20,7 @@ class Solution {
                 count = count << 1; 
             }
 
-            a -= temp;  
+            a -= temp;     
             result += count; 
         }
         }
