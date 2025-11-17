@@ -12,9 +12,9 @@ class Solution {
                 }
                 count = 0;
             }
-            if(nums[i]==0)
+            else
             {
-                count+=1;
+                count++;
             }
         }
         return true;
