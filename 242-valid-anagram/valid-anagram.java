@@ -7,25 +7,27 @@ class Solution {
 
         HashMap<Character,Integer> map = new HashMap<>();
 
-        for(char ch: s.toCharArray())
+        for(int i=0;i<s.length();i++)
         {
-            map.put(ch, map.getOrDefault(ch,0)+1);
+            char ch = s.charAt(i);
+            map.put(ch,map.getOrDefault(ch,0)+1);
         }
 
-        for(char ch: t.toCharArray())
+        for(int i=0;i<s.length();i++)
         {
+            char ch = t.charAt(i);
             if(!map.containsKey(ch))
             {
                 return false;
             }
-            map.put(ch, map.getOrDefault(ch,0)-1);
+            map.put(ch,map.get(ch)-1);
 
-            if(map.get(ch) < 0)
+            if(map.get(ch)<0)
             {
                 return false;
             }
         }
         return true;
-        
+
     }
 }
