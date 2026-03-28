@@ -10,14 +10,11 @@ class Solution {
             map.put(nums[i],map.getOrDefault(nums[i],0)+1);
         }
 
-        for(int i=0;i<n;i++)
+        for(int key: map.keySet())
         {
-            if(map.get(nums[i])>n/3)
+            if(map.get(key)>n/3)
             {
-                if(!list.contains(nums[i]))
-                {
-                    list.add(nums[i]);
-                }
+                list.add(key);
             }
         }
 
